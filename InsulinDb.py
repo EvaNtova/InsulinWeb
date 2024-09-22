@@ -11,7 +11,7 @@ from Database import configure_db  # Import the function to configure the DB
 app = Flask('InsulinDb')
 
 # Initialize CORS to allow requests from any origin
-CORS(app, origins='*')
+cors = CORS(app)
 configure_db(app)
 
 # Endpoint for user login
