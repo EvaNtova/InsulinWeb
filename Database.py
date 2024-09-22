@@ -34,11 +34,13 @@ def configure_db():
 
 # Example database function
 def get_db_connection():
+    from InsulinDb import app
     conn = sqlite3.connect(g.app.config['DATABASE'])
     return conn
     
 # Function to establish connection to the SQLite database
 def get_db():
+    from InsulinDb import app
     db = getattr(g, '_database', None)
     if db is None:
         # If no existing database connection, establish a new one
