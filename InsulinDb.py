@@ -646,4 +646,4 @@ def change_patients_info():
 
 # Run the Flask application
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
+    app.run(host="35.160.120.126", port=int(os.environ.get("PORT", 5000)))
