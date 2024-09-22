@@ -5,6 +5,7 @@ from flask_cors import CORS
 import pandas as pd
 import json
 from datetime import datetime, timedelta
+from Database import configure_db  # Import the function to configure the DB
 
 # Initialize Flask application
 app = Flask('InsulinDb')
