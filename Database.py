@@ -1,7 +1,7 @@
 # Importing necessary libraries
 import sqlite3
 import math
-from InsulinDb import app  # Importing Flask app instance
+# from InsulinDb import app  # Importing Flask app instance
 from flask import g  # Importing Flask's 'g' object for global variables
 import pandas as pd  # Importing pandas library for data manipulation
 import numpy as np
@@ -24,9 +24,18 @@ matplotlib.use('Agg')  # Using 'Agg' backend for matplotlib (no UI required)
 
 
 # Setting the path to the SQLite database file
-app.config['DATABASE'] = 'DB_Insulin.db'
+# app.config['DATABASE'] = 'DB_Insulin.db'
+
+# Function to configure the database with the app instance
+def configure_db(app):
+    app.config['DATABASE'] = 'DB_Insulin.db'
 
 
+# Example database function
+def get_db_connection():
+    conn = sqlite3.connect(g.app.config['DATABASE'])
+    return conn
+    
 # Function to establish connection to the SQLite database
 def get_db():
     db = getattr(g, '_database', None)
