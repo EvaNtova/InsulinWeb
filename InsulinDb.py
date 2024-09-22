@@ -7,7 +7,7 @@ import json
 from datetime import datetime, timedelta
 
 # Initialize Flask application
-app = Flask('Insulin')
+app = Flask('InsulinDb')
 
 # Initialize CORS to allow requests from any origin
 CORS(app, origins='*')
