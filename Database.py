@@ -27,7 +27,8 @@ matplotlib.use('Agg')  # Using 'Agg' backend for matplotlib (no UI required)
 # app.config['DATABASE'] = 'DB_Insulin.db'
 
 # Function to configure the database with the app instance
-def configure_db(app):
+def configure_db():
+    from InsulinDb import app
     app.config['DATABASE'] = 'DB_Insulin.db'
 
 
