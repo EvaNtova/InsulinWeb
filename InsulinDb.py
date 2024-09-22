@@ -12,7 +12,7 @@ app = Flask('InsulinDb')
 
 # Initialize CORS to allow requests from any origin
 cors = CORS(app)
-configure_db(app)
+configure_db()
 
 # Endpoint for user login
 @app.route('/login', methods=['POST'])
